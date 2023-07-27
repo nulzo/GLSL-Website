@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "website"
+version = "0.1.0"
+description = ""
+authors = ["Nolan Gregory <65730528+nulzo@users.noreply.github.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+django = "^4.2.3"
+django-bootstrap-v5 = "^1.0.11"
+django-crispy-forms = "^2.0"
+crispy-bootstrap5 = "^0.7"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

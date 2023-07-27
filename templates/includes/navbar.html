@@ -1,0 +1,33 @@
+{% load static %}
+<nav class="navbar border-3 border-bottom border-dark d-flex bg-white">
+    <div class="d-flex justify-content-center">
+        <a href="{% url "main_home" %}" class="navbar-brand mb-0 h1 navbar-header-link d-flex justify-content-center">NOLAN GREGORY</a>
+    </div>
+    <div class="nav-top">
+        <div class="d-flex align-items-center">
+            <a href="#" class="mx-2 light-font navbar-link">ABOUT</a>
+            <a href="#" class="light-font navbar-link">CODE</a>
+        </div>
+        <div class="d-flex align-items-center  justify-content-evenly">
+            <a href="#" class="mx-2 light-font navbar-link">PROJECTS</a>
+            <a href="{% url "blog_home" %}" class="light-font navbar-link">BLOG</a>
+        </div>
+    </div>
+</nav>
+
+{#        <div class="hamburger">#}
+{#        <a data-bs-toggle="offcanvas" href="#list" role="button" aria-controls="offcanvasExample" class="invert hover-size"#}
+{#           type="button"><img src="{% static "images/hamburger.svg" %}" width="32px" height="32px" alt="list"></a>#}
+{#        </div>#}
+
+{#<div class="offcanvas offcanvas-start" tabindex="-1" id="list" aria-labelledby="listLabel">#}
+{#    <div class="offcanvas-header">#}
+{#        <h5 class="offcanvas-title" id="offcanvasExampleLabel">Side bar</h5>#}
+{#        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>#}
+{#    </div>#}
+{#    <div class="offcanvas-body">#}
+{#        <div>#}
+{#            Placeholder...#}
+{#        </div>#}
+{#    </div>#}
+{#</div>#}

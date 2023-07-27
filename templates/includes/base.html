@@ -1,0 +1,26 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta about="Website for the epic baws nolan">
+    {% load bootstrap5 %}
+    {% bootstrap_css %}
+    {% bootstrap_javascript %}
+    {% load crispy_forms_field %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r83/three.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <title>Nulzo | {% block title %}{% endblock title %}</title>
+</head>
+<body>
+<main>
+    {% include "includes/shaders.html" %}
+    {% include "includes/navbar.html" %}
+    <h1 class="bold-font title-font d-flex justify-content-center mt-5">{% block header %}{% endblock header %}</h1>
+    {% block content %}{% endblock %}
+    </div>
+    {% include "includes/footer.html" %}
+</main>
+</body>
+</html>

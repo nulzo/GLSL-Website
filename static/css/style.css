@@ -1,0 +1,275 @@
+/* Fonts */
+@font-face {
+    font-family: "MD Primer Black";
+    src: url("../fonts/primer/MDPrimerTest-Black.otf");
+}
+
+@font-face {
+    font-family: "MD Primer Bold";
+    src: url("../fonts/primer/MDPrimerTest-Bold.otf");
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: "MD Primer Light";
+    src: url("../fonts/primer/MDPrimerTest-Light.otf");
+    font-weight: auto;
+}
+
+@font-face {
+    font-family: "MD Primer Medium";
+    src: url("../fonts/primer/MDPrimerTest-Medium.otf");
+    font-weight: auto;
+}
+
+@font-face {
+    font-family: "MD Primer Regular";
+    src: url("../fonts/primer/MDPrimerTest-Regular.otf");
+}
+
+@font-face {
+    font-family: "MD Primer Semibold";
+    src: url("../fonts/primer/MDPrimerTest-Semibold.otf");
+}
+
+.bold-font {
+    font-family: "MD Primer Bold", Sans-Serif, serif;
+}
+
+.black-bold-font {
+    font-family: "MD Primer Black", Sans-Serif, serif;
+}
+
+.light-font {
+    font-family: "MD Primer Light", Sans-Serif, serif;
+}
+
+.medium-font {
+    font-family: "MD Primer Medium", Sans-Serif, serif;
+}
+
+.regular-font {
+    font-family: "MD Primer Regular", Sans-Serif, serif;
+}
+
+.semibold-font {
+    font-family: "MD Primer Semibold", Sans-Serif, serif;
+}
+
+.title-font {
+    font-size: 5rem;
+}
+
+/* Colors */
+.black-bg {
+    background-color: #333;
+}
+
+.white-text {
+    color: #eee;
+}
+
+.light-gray-bg {
+    color: #bbb;
+}
+
+.light-gray-text {
+    color: #bbb;
+}
+
+.SOFT-BLUE {
+    color: #79aec8;
+}
+
+.CREAM {
+    color: #fffcef;
+}
+
+.invert {
+    filter: invert();
+}
+
+.hover-size {
+    transition: 0.3s;
+}
+
+.hover-size:hover {
+    transform: scale(1.05);
+}
+
+/* globals */
+
+body {
+    font-family: "MD Primer Regular", Sans-Serif, serif;
+}
+
+/* Navbar */
+.nav-top {
+    display: flex;
+    margin-left: 1em;
+    margin-right: 1em;
+}
+
+.navbar-brand {
+    padding-left: 1em;
+}
+
+.large-circle {
+    height: 500px;
+    width: 500px;
+    background-color: #333333;
+    border-radius: 500px;
+    margin-bottom: 30px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: -1;
+}
+
+.subheader {
+    font-size: 1.5em;
+}
+
+.navbar-header-link {
+    font-size: 1.25rem;
+    color: #333;
+    transition: ease-in-out 0.15s;
+}
+
+.navbar-header-link:hover {
+    color: #ff8000;
+}
+
+.navbar-link {
+    text-decoration: none;
+    color: #333;
+    font-weight: 100;
+    font-size: 0.75rem;
+    transition: ease-in-out 0.15s;
+}
+
+.navbar-link:hover {
+    color: #ff8000;
+}
+
+/* Blog */
+.blog-post-box {
+
+    margin-left: 10vw;
+    margin-right: 10vw;
+    transition: ease-in-out 0.2s;
+    border: thin solid #1b1b1b;
+}
+
+.blog-post-box:hover {
+    transform: scale(1.005);
+    border: thin solid #ff8000;
+}
+
+.blog-post-left-content {
+    display: flex;
+    width: 100%;
+}
+
+.blog-post-image {
+    justify-content: left;
+    margin-left: 1rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    width: 64px;
+    height: 64px;
+}
+
+.blog-post-title {
+    font-family: "MD Primer Semibold", serif;
+    font-size: 2vh;
+    text-decoration: none;
+    justify-content: left;
+    margin-left: 1.5rem;
+    margin-top: 1rem;
+}
+
+.blog-post-subtitle {
+    font-family: "MD Primer Light", serif;
+    font-size: 1.5vh;
+    justify-content: left;
+    margin-left: 1.5rem;
+}
+
+.blog-post-date {
+    color: #bbb;
+    font-size: 1.25vh;
+    font-family: "MD Primer Light", serif;
+}
+
+.blog-title-link {
+    color: #1b1b1b;
+    text-decoration: none;
+}
+
+.blog-title-link:hover {
+    color: rgba(255, 128, 0, 0.8);
+    text-decoration: none;
+}
+
+::selection {
+    background: #ff8000;
+    color: white;
+}
+
+::-moz-selection {
+    background: #ff8000;
+    color: white;
+}
+
+.mainorb {
+    z-index: -1;
+    background-color: rgba(255, 255, 255, 0);
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+/* Grainy texture animation by Geoff Graham https://css-tricks.com/snippets/css/animated-grainy-texture/ */
+
+main::before {
+	animation: grain 5s steps(10) infinite;
+	background-image: url("../images/noise.png");
+	content: '';
+	height: 300%;
+	left: -50%;
+	opacity: 0.5;
+	position: fixed;
+	top: -100%;
+	width: 300%;
+	pointer-events: none;
+}
+
+@keyframes grain {
+  0%, 100% { transform:translate(0, 0) }
+  10% { transform:translate(-5%, -10%) }
+  20% { transform:translate(-15%, 5%) }
+  30% { transform:translate(7%, -25%) }
+  40% { transform:translate(-5%, 25%) }
+  50% { transform:translate(-15%, 10%) }
+  60% { transform:translate(15%, 0%) }
+  70% { transform:translate(0%, 15%) }
+  80% { transform:translate(3%, 35%) }
+  90% { transform:translate(-10%, 10%) }
+}
+
+body {
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+.waves {
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow-x: hidden;
+    z-index: -1;
+    overflow-y: hidden;
+    height: 100%;
+
+}

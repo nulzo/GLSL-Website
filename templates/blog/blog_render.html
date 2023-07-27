@@ -1,0 +1,35 @@
+{% load static %}
+<div class="blog-posts mt-5">
+    {% for blog in blogs %}
+        <div class="blog-post-box mt-5">
+            <div class="blog-post-left-content">
+                <div class="blog-post-image">
+                    {% if blog.mood == "E" %}
+                    <img src="{% static "images/exclaim.svg" %}" width="64" height="64" alt="Blog Image">
+                    {% elif blog.mood == "L" %}
+                    <img src="{% static "images/lightning.svg" %}" width="64" height="64" alt="Blog Image">
+                    {% elif blog.mood == "C" %}
+                    <img src="{% static "images/code.svg" %}" width="64" height="64" alt="Blog Image">
+                    {% elif blog.mood == "A" %}
+                    <img src="{% static "images/activity.svg" %}" width="64" height="64" alt="Blog Image">
+                    {% elif blog.mood == "Q" %}
+                    <img src="{% static "images/question.svg" %}" width="64" height="64" alt="Blog Image">
+                    {% elif blog.mood == "S" %}
+                        <img src="{% static "images/stars.svg" %}" width="64" height="64" alt="Blog Image">
+                    {% endif %}
+                </div>
+                <div class="title-display">
+                    <div class="blog-post-title">
+                        <a href="#" class="blog-title-link">{{ blog.title|upper }}</a>
+                    </div>
+                    <div class="blog-post-subtitle">
+                        {{ blog.subtitle }}
+                    </div>
+                </div>
+                <div class="blog-post-date ms-auto p-2">
+                    {{ blog.last_updated }}
+                </div>
+            </div>
+        </div>
+    {% endfor %}
+</div>
