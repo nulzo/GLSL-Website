@@ -1,9 +1,0 @@
-{
-  "name": "website",
-  "version": "1.0.0",
-  "type": "module",
-  "dependencies": {
-    "gsap": "^3.12.2",
-    "three": "^0.154.0"
-  }
-}
